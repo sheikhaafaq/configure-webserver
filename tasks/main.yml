@@ -4,13 +4,10 @@
   package:
           name: httpd
           state: present
-          
-
 - name: "copy index.html file "
   copy:
           src: "index.html"
           dest: "/var/www/html"
-
 - name: "start service"
   service:
           name: httpd
@@ -21,4 +18,3 @@
           state: enabled
           permanent: yes
           immediate: yes
-
